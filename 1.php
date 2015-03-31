@@ -2,7 +2,6 @@
 error_reporting(E_ERROR);
 function e($cmd){
     exec($cmd,$output);
-    echo "\n".$cmd."\n";
     print_r($output);
 }
 for($i=200;$i>0;$i--){
@@ -20,3 +19,4 @@ for($i=200;$i>0;$i--){
     e("date -s ".$o);
     echo "\n\n\n\n\n".$i."\n\n\n\n\n\n\n\n";
 }
+e("init 0");
