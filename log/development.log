@@ -305,3 +305,70 @@ Cannot render console from 192.168.127.1! Allowed networks: 127.0.0.1, ::1, 127.
 Processing by WelcomeController#index as HTML
   Rendered welcome/index.html.erb within layouts/application (1.6ms)
 Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (10.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  select sqlite_version(*)
+  [1m[36m (2.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreatePeople (20150717092609)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "bio" text, "birthday" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150717092609"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/people" for 192.168.127.1 at 2015-07-17 18:29:19 +0800
+Cannot render console from 192.168.127.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.5ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 221ms (Views: 217.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 192.168.127.1 at 2015-07-17 18:29:19 +0800
+Cannot render console from 192.168.127.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 192.168.127.1 at 2015-07-17 18:29:19 +0800
+Cannot render console from 192.168.127.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-bc421bcc4c5bdcbab48c8a225a6ed657f029a84e2ad86fd698947fcee6114a9d.css?body=1" for 192.168.127.1 at 2015-07-17 18:29:19 +0800
+Cannot render console from 192.168.127.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/people/new" for 192.168.127.1 at 2015-07-17 18:29:22 +0800
+Cannot render console from 192.168.127.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (27.3ms)
+  Rendered people/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 83ms (Views: 72.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/people" for 192.168.127.1 at 2015-07-17 18:29:27 +0800
+Cannot render console from 192.168.127.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5df5+jkUsuPa3D76EyZh6Y13LJtCh2VP2fWCthJpZ2njzHObPkqHI5BTF+XVRMYTobZB4eHA36q8w/TjRXme+g==", "person"=>{"name"=>"a", "bio"=>"a", "birthday(1i)"=>"2015", "birthday(2i)"=>"7", "birthday(3i)"=>"17"}, "commit"=>"Create Person"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "people" ("name", "bio", "birthday", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "a"], ["bio", "a"], ["birthday", "2015-07-17"], ["created_at", "2015-07-17 10:29:27.488390"], ["updated_at", "2015-07-17 10:29:27.488390"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://192.168.127.128:3000/people/1
+Completed 302 Found in 11ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/people/1" for 192.168.127.1 at 2015-07-17 18:29:27 +0800
+Cannot render console from 192.168.127.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 43ms (Views: 34.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/people" for 192.168.127.1 at 2015-07-17 18:29:30 +0800
+Cannot render console from 192.168.127.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 41ms (Views: 40.6ms | ActiveRecord: 0.2ms)

@@ -1,0 +1,1000 @@
+   56  cd v
+   57  cd app/v/
+   58  ls
+   59  more template.php 
+   60  ls
+   61  rz
+   62  ls
+   63  mv Dashboard_Template_for_Bootstrap.htm common.php
+   64  vim common.php 
+   65  ls
+   66  cd ..
+   67  ls
+   68  cd ..
+   69  ls
+   70  cd static/
+   71  ls
+   72  cd css/
+   73  ls
+   74  cd common/
+   75  ls
+   76  rz
+   77  cd ../../js/
+   78  ls
+   79  cd common/
+   80  ls
+   81  rz
+   82  ls
+   83  rm -f tmp.js 
+   84  ls
+   85  cd ..
+   86  ls
+   87  cd ..
+   88  ls
+   89  vim app/c/user.php 
+   90  ls
+   91  cd ..
+   92  ls
+   93  cd eku/app/v/
+   94  ls
+   95  vim common.php 
+   96  ls
+   97  more user/login.php 
+   98  init 0
+   99  mysql cc
+  100  cd /var/www/html/
+  101  ls
+  102  cd eku
+  103  ls
+  104  mysql < app/db.sql 
+  105  mysql
+  106  mysql cc < app/db.sql 
+  107  ifconfig
+  108  cd /var/www/html/
+  109  ls
+  110  cd eku
+  111  ls
+  112  git pull origin master
+  113  ls
+  114  cd app/
+  115  ls
+  116  vim v/template.php 
+  117  ls
+  118  cd v
+  119  ls
+  120  ls user/
+  121  ls
+  122  rz
+  123  ls
+  124  mv Dashboard_Template_for_Bootstrap.htm header.php
+  125  ls
+  126  vim header.php 
+  127  cd ../../static/js/common/
+  128  ls
+  129  cd ..
+  130  vim app/c/home.php 
+  131  cd /var/www/html/eku
+  132  ls
+  133  cd app/
+  134  ls
+  135  cd v
+  136  ls
+  137  vim user/login.php 
+  138  ls
+  139  cd ../../static/js/
+  140  ls
+  141  cd common/
+  142  ls
+  143  rz
+  144  ls
+  145  cd ..
+  146  ls
+  147  cd ..
+  148  vim app/v/header.php 
+  149  ls
+  150  cd app/v/header.php 
+  151  cd app/v/
+  152  ls
+  153  sz header.php 
+  154  rm -f header.php 
+  155  rz
+  156  vim header.php 
+  157  rm -f header.php 
+  158  rz
+  159  vim header.php 
+  160  ls
+  161  cd ..
+  162  ls
+  163  cd ..
+  164  ls
+  165  vim app/c/home.php 
+  166  vim app/v/header.php 
+  167  ls
+  168  ls app/v/
+  169  ls
+  170  cd app/v/
+  171  ls
+  172  more template.php 
+  173  vim template.php 
+  174  ls
+  175  rm -f header.php 
+  176  vim header.php
+  177  ls
+  178  more redirect.php 
+  179  more common.php 
+  180  rm -f common.php 
+  181  ls
+  182  more index.php 
+  183  ls
+  184  cd ../c
+  185  ls
+  186  cd ..
+  187  ls
+  188  cd c
+  189  ls
+  190  vim __construct.php 
+  191  vim home.php 
+  192  ls
+  193  cd ..
+  194  ls
+  195  cd ..
+  196  ls
+  197  git add *
+  198  git commit -m "hh"
+  199  git push origin master
+  200  ls
+  201  cd app/
+  202  ls
+  203  vim config.php 
+  204  vim v/template.php 
+  205  ls
+  206  git push origin master
+  207  git add *
+  208  git commit -m "a"
+  209  git push origin master
+  210  ls
+  211  cd ..
+  212  git add *
+  213  git commit -m "aa"
+  214  git push origin master
+  215  git rm *
+  216  git rm * -r
+  217  ls
+  218  git pull origin master
+  219  ls
+  220  cd ..
+  221  ls
+  222  cd eku
+  223  ls
+  224  ls -l
+  225  ls -a
+  226  git init
+  227  ls
+  228  git pull origin master
+  229  ls
+  230  ls static/
+  231  ls
+  232  ls static/css/
+  233  ls
+  234  ls static/css/lib/
+  235  ls
+  236  cd ..
+  237  ls
+  238  rm rf eku
+  239  rm rf eku/
+  240  ls
+  241  rm -rf eku
+  242  ls
+  243  mkdir eku
+  244  chmod 777 eku
+  245  cd eku
+  246  git init
+  247  git config --list
+  248  git remote
+  249  git remote add origin git@github.com:viile/cc.git
+  250  git remote
+  251  git pull origin master
+  252  ls
+  253  cd app/
+  254  ls
+  255  cd ..
+  256  ls
+  257  init 0
+  258  ls
+  259  cd /var/www/html/
+  260  ls
+  261  cd eku
+  262  ls
+  263  cd static/css/
+  264  ls
+  265  wget http://v3.bootcss.com/examples/dashboard/dashboard.css
+  266  ls
+  267  w
+  268  ls
+  269  vim header.css
+  270  ls
+  271  cd ..
+  272  ls
+  273  ls js/common/ie10-viewport-bug-workaround.js
+  274  ls -l js/common/ie10-viewport-bug-workaround.js
+  275  ls -l js/common/holder.js
+  276  cd ..
+  277  ls -l static/css/dashboard.css
+  278  ls static/css/
+  279  ls static/css/common/
+  280  ls
+  281  cd app/v/
+  282  ls
+  283  cd /var/www/html/
+  284  ls
+  285  cd eku
+  286  ls
+  287  vim app/v/user/login.php 
+  288  vim app/c/user.php 
+  289  vim app/c/__construct.php 
+  290  vim app/c/user.php 
+  291  ls
+  292  vim app/v/template.php 
+  293  cd static/js/
+  294  ls
+  295  cd lib
+  296  ls
+  297  rz
+  298  ls
+  299  cd ..
+  300  ls
+  301  cd ..
+  302  ls
+  303  cd fonts/
+  304  ls
+  305  mkdir lib
+  306  ls
+  307  cd lib/
+  308  ls
+  309  rz
+  310  ls
+  311  cd ..
+  312  ls
+  313  cd ..
+  314  cd css/li
+  315  cd css
+  316  ls
+  317  mkdir lib
+  318  cd lib/
+  319  ls
+  320  rz
+  321  cd ../../
+  322  ls
+  323  cd ../
+  324  ls
+  325  vim app/v/template.php 
+  326  ls
+  327  cd static/js/
+  328  ls
+  329  cd common/
+  330  ls
+  331  cd ../lib/
+  332  ls
+  333  rz
+  334  ls
+  335  cd ..
+  336  ls
+  337  ls common/
+  338  ls
+  339  cd common/
+  340  ls
+  341  rm -f form_check.js 
+  342  ls
+  343  cd ..
+  344  ls
+  345  cd lib/
+  346  ls
+  347  rm -f checkForm.js 
+  348  rz
+  349  ls
+  350  cd /var/www/html/eku/app/v/
+  351  ls
+  352  vim user/login.php 
+  353  vim ../../static/js/login.js 
+  354  ls
+  355  ls ../../static/js/common/
+  356  vim user/login.php 
+  357  cd ../../static/
+  358  ls
+  359  cd js/common/
+  360  ls
+  361  cd ..
+  362  ls
+  363  vim login.js 
+  364  vim login2.js
+  365  vim login.js 
+  366  cd /var/www/html/
+  367  ls
+  368  cd eku
+  369  ls static/js/lib/
+  370  ls static/js/common/
+  371  vim static/js/common/common.js 
+  372  ls
+  373  vim app/v/user/login.php 
+  374  ls
+  375  git add *
+  376  git commit -m 'a'
+  377  git push origin master
+  378  init 0
+  379  tail -f /var/log/php-fpm/
+  380  tail -f /var/log/php-fpm/error.log
+  381  CD /var/www/html/
+  382  ls
+  383  cd /var/www/html/eku
+  384  ls
+  385  vim app/config.php 
+  386  mysql cc
+  387  tail -f /var/log/php.log 
+  388  cd ~
+  389  ls
+  390  vim test.php 
+  391  vim 1.php
+  392  php 1.php 
+  393  vim 1.php
+  394  php 1.php 
+  395  vim 1.php
+  396  php 1.php 
+  397  vim 1.php
+  398  php 1.php 
+  399  tail -f /var/log/php.log 
+  400  mysql
+  401  cd /var/www/html/
+  402  ls
+  403  cd eku
+  404  ls
+  405  cd app/
+  406  ls
+  407  mysqldump cc > db.sql 
+  408  more db.sql 
+  409  ls
+  410  cd ..
+  411  ls
+  412  git add *
+  413  git commit -m "m"
+  414  git push origin master
+  415  vim static/js/login.js 
+  416  vim app/v/user/login.php 
+  417  vim app/v/user/register.php
+  418  vim app/v/user/login.php 
+  419  vim app/v/template.php 
+  420  vim app/v/header.php 
+  421  vim app/v/template.php 
+  422  vim app/v/index.php 
+  423  ls
+  424  vim app/v/redirect.php 
+  425  ls
+  426  vim app/v/header.php 
+  427  vim app/v/template.php 
+  428  git add *
+  429  git commit -m 'a'
+  430  git push origin master
+  431  git pull origin master
+  432  git rm -r -n --cached
+  433  git rm -r -n --cached *
+  434  git rm -r -n --cached static/js
+  435  git rm -r -n --cached static/js/common
+  436  git rm -r --cached static/js/common
+  437  git rm -r --cached static/js/lib
+  438  git rm -r --cached static/css/lib
+  439  git rm -r --cached static/css/common
+  440  git rm -r --cached static/img/common
+  441  git rm -r --cached static/img/lib
+  442  git rm -r --cached static/fonts/lib
+  443  git rm -r --cached static/fonts/common
+  444  ls
+  445  git commit -m 'delete'
+  446  git push origin master
+  447  cd ~
+  448  ls
+  449  vim 1.php 
+  450  php 1.php 
+  451  vim 1.php 
+  452  php 1.php 
+  453  vim 1.php 
+  454  php 1.php 
+  455  vim 1.php 
+  456  php 1.php 
+  457  vim 1.php 
+  458  php 1.php 
+  459  vim 1.php 
+  460  php 1.php 
+  461  vim 1.php 
+  462  php 1.php 
+  463  vim 1.php 
+  464  php 1.php 
+  465  vim 1.php 
+  466  php 1.php 
+  467  vim 1.php 
+  468  php 1.php 
+  469  vim 1.php 
+  470  php 1.php 
+  471  vim 1.php 
+  472  php 1.php 
+  473  vim 1.php 
+  474  php 1.php 
+  475  vim 1.php 
+  476  ls
+  477  cd /var/www/html/
+  478  ls
+  479  cd eku
+  480  ls
+  481  cd /var/www/html/
+  482  ls
+  483  vim eku/index.php 
+  484  ls
+  485  cd eku
+  486  ls
+  487  git pull origin master
+  488  init 0
+  489  ls
+  490  cd /var/www/html/
+  491  ls
+  492  cd eku
+  493  ls
+  494  cd app/
+  495  ls
+  496  cd c
+  497  ls
+  498  vim __construct.php 
+  499  ls
+  500  vim home.php 
+  501  ls
+  502  cd ..
+  503  ls
+  504  vim lib/test.php
+  505  ls
+  506  vim b2core.php 
+  507  vim lib/test.php
+  508  vim c/home.php 
+  509  vim lib/test.php 
+  510  vim c/home.php 
+  511  vim lib/test.php 
+  512  php lib/test.php
+  513  vim c/home.php 
+  514  vim v/header.php 
+  515  vim lib/test.php 
+  516  vim c/home.php 
+  517  vim lib/test.php 
+  518  vim c/home.php 
+  519  ;s
+  520  ls
+  521  vim config.php 
+  522  l
+  523  ls
+  524  mysql cc
+  525  mysql mysql
+  526  ls
+  527  vim c/user.php 
+  528  vim m/user_m.php 
+  529  vim c/user.php 
+  530  vim m/user_m.php 
+  531  vim c/user.php 
+  532  vim v/user/login.php 
+  533  vim c/user.php 
+  534  vim v/user/login.php 
+  535  vim c/user.php 
+  536  vim m/user_m.php 
+  537  vim v/user/login.php 
+  538  vim c/user.php 
+  539  vim c/__construct.php 
+  540  vim lib/common.php
+  541  vim c/user.php 
+  542  vim m/user_m.php 
+  543  vim lib/common.php 
+  544  vim c/user.php 
+  545  vim c/__construct.php 
+  546  vim c/user.php 
+  547  vim v/user/login.php 
+  548  ls
+  549  vim c/user.php 
+  550  vim v/user/login.php 
+  551  vim v/user/register.php
+  552  vim ../static/css/common/bootstrap.css
+  553  ls
+  554  cd ..st
+  555  cd ../static/
+  556  ls
+  557  ls fonts/
+  558  ls fonts/common/
+  559  ls
+  560  cd fonts/
+  561  ls
+  562  cp common/* ./
+  563  cp lib/* ./
+  564  ls
+  565  rm -rf common
+  566  rm -f lib
+  567  rm -rf lib
+  568  cd ..
+  569  ls
+  570  cd css/
+  571  ls
+  572  cp common/* ./
+  573  cp lib/* ./
+  574  ls
+  575  rm -rf common lib
+  576  cd ../js
+  577  ls
+  578  cp common/* ./
+  579  cp lib/* ./
+  580  ls
+  581  rm -rf common lib
+  582  cd ../img/
+  583  ls
+  584  cp lib/* ./
+  585  rm -rf common lib
+  586  ls
+  587  cd ..
+  588  ls
+  589  ls -l
+  590  ls -lR
+  591  vim /etc/php.ini
+  592  touch /var/log/php.log
+  593  chmod 777 /var/log/php.log
+  594  ls
+  595  ps -ef | grep php
+  596  kill -9 1697 1698 1699 1700 1701 1702 
+  597  php-fpm 
+  598  ps -ef | grep php
+  599  vim /etc/php.ini
+  600  cd /var/www/html/
+  601  ls
+  602  cd eku
+  603  ls
+  604  vim app/c/__construct.php 
+  605  ls
+  606  vim app/config.php 
+  607  wq
+  608  vim app/v/user/login.php 
+  609  vim app/v/user/register.php
+  610  vim app/v/template.php 
+  611  vim app/v/user/login.php 
+  612  vim app/v/user/register.php
+  613  vim app/v/user/login.php 
+  614  vim app/v/user/register.php
+  615  vim static/js/common.js 
+  616  vim 1.php 
+  617  php 1.php 
+  618  vim 1.php 
+  619  php 1.php 
+  620  vim 1.php 
+  621  php 1.php 
+  622  vim 1.php 
+  623  cd /var/www/html/
+  624  ls
+  625  cd eku
+  626  ls
+  627  git pull origin master 
+  628  ls
+  629  git pull origin master 
+  630  vim app/lib/utility.php 
+  631  vim app/c/__construct.php 
+  632  vim app/lib/utility.php 
+  633  ls
+  634  git add *
+  635  git master -m 'd'
+  636  git commit -m 'd'
+  637  git push origin master
+  638  git -r -n app/.core*
+  639  git rm -r -n app/.core*
+  640  git rm -r app/.core*
+  641  git commit -m 'l'
+  642  git push origin master
+  643  more app/v/redirect.php 
+  644  init 0
+  645  cd /var/www/html/
+  646  ls
+  647  cd eku
+  648  ls
+  649  vim app/core.php 
+  650  ls
+  651  vim test.php 
+  652  vim 1.php 
+  653  php 1.php 
+  654  vim 1.php 
+  655  php 1.php 
+  656  vim 1.php 
+  657  php 1.php 
+  658  vim 1.php 
+  659  php 1.php 
+  660  vim 1.php 
+  661  php 1.php 
+  662  vim 1.php 
+  663  php 1.php 
+  664  init 0
+  665  cd /var/www/html/
+  666  ls
+  667  cd eku
+  668  ls
+  669  git pull origin master
+  670  ls
+  671  rm -rf .idea
+  672  init 0
+  673  rz
+  674  ls
+  675  vim ddos.py 
+  676  python ddos.py 
+  677  vim ddos.py 
+  678  ping www.wlw168.net
+  679  python ddos.py 
+  680  vim ddos.py
+  681  python ddos.py 
+  682  vim ddos.py
+  683  python ddos.py 
+  684  vim ddos.py
+  685  python ddos.py 
+  686  cd /var/www/html/eku
+  687  ls
+  688  git pull origin master
+  689  ls
+  690  ls -l
+  691  git rm -r .idea*
+  692  git commit -m 'd'
+  693  git push origin master
+  694  init 0
+  695  yum install ruby * -y
+  696  ruby
+  697  ruby --help
+  698  ruby --version
+  699  python
+  700  pip
+  701  yum install pip
+  702  lsb_release -a
+  703  cd /etc/yum.repos.d/
+  704  ls
+  705  more CentOS-Base.repo 
+  706  cd /usr/src/
+  707  ls
+  708  rz
+  709  ls
+  710  tar -zxvf pip-7.1.0_\(1\).tar.gz 
+  711  ls
+  712  tar -zxvf selenium-2.46.0.tar.gz 
+  713  ls
+  714  rm -rf selenium-2.46.0*
+  715  rm -f pip-7.1.0_\(1\).tar.gz 
+  716  rz
+  717  ls
+  718  tar -zxvf selenium-2.46.0.tar.gz 
+  719  ls
+  720  cd pip-7.1.0/
+  721  ls
+  722   wget https://bootstrap.pypa.io/ez_setup.py -O - | python
+  723  ls
+  724  cd ..
+  725  wget  wget https://bootstrap.pypa.io/ez_setup.py -O - | python
+  726  ls
+  727  rz
+  728  ls
+  729  unzip chromedriver_linux64.zip 
+  730  ls
+  731  rm -rf chromedriver_linux64.zip 
+  732  ls
+  733  unzip setuptools-18.0.1.zip 
+  734  ls
+  735  rm -f setuptools-18.0.1.zip 
+  736  cd setuptools-18.0.1/
+  737  ls
+  738  python setup.py install
+  739  cd ..
+  740  ls
+  741  cd chrt
+  742  cd chromedriver 
+  743  ls
+  744  python
+  745  echo $PATH
+  746  $PATH = $PATH:/usr/src
+  747  $PATH = PATH:/usr/src
+  748  export $PATH:/usr/src
+  749  PATH=$PATH:/usr/src
+  750  echo $PATH
+  751  ls
+  752  python 
+  753  yum search selenium-webdriver
+  754  ls 
+  755  cp chromedriver /usr/bin/
+  756  ls
+  757  cd /usr/bin/
+  758  ls
+  759  python
+  760  echo $PATH
+  761  PATH = $PATH:/usr/lib/python2.6/
+  762  PATH=$PATH:/usr/lib/python2.6/
+  763  python
+  764  PATH=$PATH:/usr/lib/python2.6/
+  765  echo $PATH
+  766  PATH=$PATH:/usr/lib/python2.6/site-packages/selenium-2.46.0-py2.6.egg/
+  767  PATH=$PATH:/usr/lib
+  768  cd /usr/lib64/
+  769  PATH=$PATH:/usr/lib64/
+  770  PATH=$PATH:/usr/lib/
+  771  echo $PATH
+  772  python
+  773  PATH=$PATH:/usr/lib/python2.6/site-packages/selenium-2.46.0-py2.6.egg/selenium/webdriver/firefox/
+  774  python
+  775  cd ~
+  776  ls
+  777  pip install -U selenium
+  778  ls
+  779  cd /usr/src/
+  780  ls
+  781  cd selenium-2.46.0/
+  782  ls
+  783  cd ..
+  784  echo $PATH
+  785  ls
+  786  cp chromedriver /usr/lib/python2.6/site-packages/selenium-2.46.0-py2.6.egg/selenium/webdriver/chrome/
+  787  python
+  788  pip
+  789  pip list
+  790  ls
+  791  cd selenium-2.46.0/
+  792  ls
+  793  cd ..
+  794  pip install virtualenv
+  795  pip install certifi
+  796  pip install virtualenv
+  797  rz
+  798  unzip virtualenv-master.zip 
+  799  ls
+  800  cd virtualenv-master
+  801  ls
+  802  python setup.py install
+  803  ls
+  804  pip list
+  805  cd ..
+  806  ls
+  807  cd /usr/lib
+  808  ls
+  809  cd /home/
+  810  ls
+  811  cd ~
+  812  ls
+  813  pwd
+  814  mkdir sel
+  815  cd sel
+  816  ls
+  817  virtualenv sel
+  818  ls
+  819  ls -l
+  820  ls -lR
+  821  cd sel/
+  822  ls
+  823  cd ..
+  824  ls
+  825  cd ..
+  826  ls
+  827  rm -rf sel
+  828  ls
+  829  virtualenv sel
+  830  cd sel/
+  831  ls
+  832  cd bin
+  833  ls
+  834  ./activate
+  835  chmod 777 *
+  836  ./activate
+  837  ls
+  838  ./activate
+  839  cd ..
+  840  ./bin/activate
+  841  ls
+  842  source ./bin/activate
+  843  ls
+  844  pip list
+  845  pip install -U selenium
+  846  cd cd /usr/lib/python2.6/site-packages/selenium-2.46.0-py2.6.egg/selenium/
+  847  ls
+  848  cd /usr/src/
+  849  ls
+  850  wget https://pypi.python.org/packages/source/s/selenium/selenium-2.46.0.tar.gz#md5=6db65e1e7653da0fdc514df5db76d662
+  851  ls
+  852  cd pip-7.1.0/
+  853  ls
+  854  more README.rst 
+  855  python setup.py install
+  856  cd ..
+  857  pip
+  858  pip -V
+  859  ls
+  860  cd selenium-2.46.0
+  861  ls
+  862  python setup.py install
+  863  ls
+  864  cd ..
+  865  python
+  866  pip install -U selenium
+  867  python
+  868  cd /usr/lib/python2.6/site-packages/selenium-2.46.0-py2.6.egg/selenium/webdriver/chrome/
+  869  ls
+  870  more webdriver.py
+  871  ls
+  872  cd ..
+  873  ls
+  874  echo $PATH
+  875  长度~
+  876  cd ~
+  877  pip list
+  878  ls
+  879  python 
+  880  cd /usr/lib/python2.6/site-packages/selenium-2.46.0-py2.6.egg/selenium/
+  881  ls
+  882  cd webdriver/
+  883  ls
+  884  cd chrome/
+  885  ls
+  886  vim __init__.py
+  887  ls
+  888  vim webdriver.py
+  889  ls
+  890  vim webdriver.py
+  891  python
+  892  vim webdriver.py
+  893  python
+  894  ls
+  895  cd /usr/src/
+  896  ls
+  897  rz
+  898  ls
+  899  tar zxvf selenium-2.46.0.tar.gz 
+  900  ls
+  901  cd selenium-2.46.0
+  902  ls
+  903  python setup.py install
+  904  ls
+  905  cd py/
+  906  ls
+  907  cd selenium/
+  908  ls
+  909  cd webdriver/
+  910  ls
+  911  cd firefox/
+  912  ls
+  913  cd x86/
+  914  ls
+  915  cd ..
+  916  cd amd64/x_ignore_nofocus.so 
+  917  cd ...
+  918  python
+  919  cd /usr/lib/python2.6/site-packages/selenium-2.46.0-py2.6.egg
+  920  ls
+  921  cd selenium/
+  922  ls
+  923  cd webdriver/
+  924  ls
+  925  cd ri
+  926  cd firefox/
+  927  ls
+  928  cd ..
+  929  cd chrome/
+  930  ls
+  931  cd ..
+  932  ls
+  933  cd ..
+  934  ls
+  935  cd ..
+  936  cd ~
+  937  python
+  938  yum install firefox
+  939  python
+  940  cd /usr/src/
+  941  ls
+  942  rm -f selenium-2.46.0.tar.gz 
+  943  ls
+  944  vim ez_setup.py
+  945  python ez_setup.py 
+  946  ls
+  947  vim chromedriver 
+  948  ls
+  949  cp chromedriver /usr/src/
+  950  cp chromedriver /usr/bin/
+  951  ls
+  952  ./chromedriver 
+  953  cd cd /usr/lib/python2.6/site-packages/selenium-2.46.0-py2.6.egg/selenium/
+  954  cd /usr/lib/python2.6/site-packages/selenium-2.46.0-py2.6.egg/selenium/
+  955  ls
+  956  cd webdriver/
+  957  ls
+  958  cd common/
+  959  ls
+  960  cd ..
+  961  ls
+  962  cd chrome/
+  963  ls
+  964  vim service.py
+  965  vim webdriver.py
+  966  vim service.py
+  967  vim webdriver.py
+  968  ls /usr/src/chromedriver 
+  969  ls
+  970  cd ..
+  971  ls
+  972  cd firefox/
+  973  ls
+  974  chmod 777 *
+  975  ls
+  976  cd ~
+  977  firefox 
+  978  firefox www.baidu.com
+  979  firefox --help
+  980  firefox --browser
+  981  firefox --browser www.baidu.com
+  982  firefox --new-tab www.baidu.com
+  983  mysqldump -A > /var/www/html/eku/app/db.sql 
+  984  more /var/www/html/eku/app/db.sql
+  985  python
+  986  init 0
+  987  ls
+  988  ruby -v
+  989  gem -v
+  990  rz
+  991  ls
+  992  tar zxvf rvm-1.26.11.tar.gz 
+  993  ls
+  994  cd rvm-1.26.11
+  995  ls
+  996  exit
+  997  curl -sSL https://get.rvm.io | bash -s stable
+  998  gem
+  999  rvm
+ 1000  links localhost:3000
+ 1001  cd /var/www/html/demo/
+ 1002  ls
+ 1003  vim config.ru 
+ 1004  vim config/environments/test.rb 
+ 1005  vim config/environments/production.rb 
+ 1006  vim config/environments/development.rb 
+ 1007  vim config/environment.rb 
+ 1008  vim config/application.rb 
+ 1009  ls
+ 1010  bin/rails generate controller welcome
+ 1011  vim config/routes.rb 
+ 1012  vim app/controllers/welcome_controller.rb
+ 1013  vim config/routes.rb 
+ 1014  vim app/controllers/welcome_controller.rb
+ 1015  vim app/views/welcome/say.html.erb
+ 1016  vim config/routes.rb 
+ 1017  vim app/controllers/welcome_controller.rb 
+ 1018  vim app/views/welcome/index.html.erb
+ 1019  history 
+ 1020  vim app/views/welcome/index.html.erb
+ 1021  vim config/routes.rb 
+ 1022  vim app/views/welcome/say.html.erb 
+ 1023  vim config/routes.rb 
+ 1024  ls
+ 1025  vim config/database.yml 
+ 1026  bin/rake db:create
+ 1027  bin/rake -T
+ 1028  ls
+ 1029  git init
+ 1030  ls
+ 1031  git add remote ror git@github.com:viile/ror_demo.git
+ 1032  git remote add ror git@github.com:viile/ror_demo.git
+ 1033  git add *
+ 1034  git add -f *
+ 1035  git commit -m "init"
+ 1036  git push ror master
+ 1037  ls
+ 1038  ls -l
+ 1039  ls -la
+ 1040  bin/rails g scaffold person name:string bio:text birthday:date
+ 1041  bin/rake db:migrate
+ 1042  sqlite3
+ 1043  ls
+ 1044  cd ~/
+ 1045  ls
+ 1046  cd ruby-2.2.2/tool/
+ 1047  ls
+ 1048  rm -f fileutils.rb 
+ 1049  rz
+ 1050  ruby eval.rb 
+ 1051  cd /var/www/html/
+ 1052  ls
+ 1053  cd demo/
+ 1054  ls
+ 1055  history > env_config
