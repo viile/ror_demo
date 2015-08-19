@@ -12,7 +12,7 @@ for($i=300;$i>0;$i--){
 	    fclose($fl);
             sleep(1);
 	    e("git add * ");
-	    e('git commit -m "dfa"');
+	    e('git commit -m '.rand(123123,123412378));
 	    e('git push r master');
 	    sleep(2);
     }
