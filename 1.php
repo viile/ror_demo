@@ -1,4 +1,4 @@
 <?php
     exec("git add * ",$output);
-    exec("git commit -m 2",$output);
+    exec('git commit -m "dfa"',$output);
     print_r($output);
