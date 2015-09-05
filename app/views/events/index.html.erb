@@ -3,7 +3,6 @@
   <li>
   <%= event.name %>
   <%= link_to event.name, event_path(event) %>
-  <%= link_to 'attendees', event_attendees_path(event) %>
   <%= link_to " (XML)", event_path(event, :format => :xml) %>
   <%= link_to " (JSON)", event_path(event, :format => :json) %>
   <%= link_to 'Show', event_path(event) %>
@@ -14,4 +13,3 @@
 </ul>
 <%= link_to 'new event', new_event_path %>
 <%= link_to "Atom feed", events_path(:format => :atom) %>
-
