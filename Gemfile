@@ -22,6 +22,7 @@ gem "kaminari"
 #javascript runtime
 gem 'execjs' 
 gem 'therubyracer'
+#
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
