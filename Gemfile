@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -19,6 +19,9 @@ gem 'coffee-rails', '~> 4.1.0'
 gem "kaminari"
 #end
 
+#javascript runtime
+gem 'execjs' 
+gem 'therubyracer'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
