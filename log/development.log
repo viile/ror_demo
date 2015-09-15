@@ -13379,3 +13379,34 @@ Cannot render console from 192.168.13.1! Allowed networks: 127.0.0.1, ::1, 127.0
 Processing by StaticPagesController#home as HTML
   Rendered static_pages/home.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/home" for 192.168.13.1 at 2015-09-16 07:30:52 +0800
+Cannot render console from 192.168.13.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 32ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.13.1 at 2015-09-16 07:30:52 +0800
+Cannot render console from 192.168.13.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.13.1 at 2015-09-16 07:30:52 +0800
+Cannot render console from 192.168.13.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 192.168.13.1 at 2015-09-16 07:30:52 +0800
+Cannot render console from 192.168.13.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.13.1 at 2015-09-16 07:30:52 +0800
+Cannot render console from 192.168.13.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.13.1 at 2015-09-16 07:30:52 +0800
+Cannot render console from 192.168.13.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.13.1 at 2015-09-16 07:30:52 +0800
+Cannot render console from 192.168.13.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
