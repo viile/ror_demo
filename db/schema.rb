@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150922105210) do
+ActiveRecord::Schema.define(version: 20151008094959) do
 
   create_table "attendees", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -21,8 +21,10 @@ ActiveRecord::Schema.define(version: 20150922105210) do
   end
 
   create_table "categories", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name",       limit: 255
+    t.integer  "position",   limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "event_groupships", force: :cascade do |t|
@@ -39,7 +41,10 @@ ActiveRecord::Schema.define(version: 20150922105210) do
     t.integer  "capacity",    limit: 4
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.integer  "category_id", limit: 4
   end
+
+  add_index "events", ["category_id"], name: "index_events_on_category_id", using: :btree
 
   create_table "groups", force: :cascade do |t|
     t.string   "name",       limit: 255

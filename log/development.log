@@ -15517,3 +15517,2191 @@ WHERE fk.referenced_column_name is not null
   [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `users` (`name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES (?, ?, ?, ?, ?)[0m  [["name", "v"], ["email", "a@v.com"], ["password_digest", "$2a$10$2z5D896XdLA1RNvOPZcTRejNwTlBs5kEz7SEmo3yd.6CzmW5XU.Au"], ["created_at", "2015-09-16 03:01:15"], ["updated_at", "2015-09-16 03:01:15"]]
   [1m[35m (10.7ms)[0m  COMMIT
   [1m[36mUser Load (1.0ms)[0m  [1mSELECT  `users`.* FROM `users`  ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddPasswordDigestToUsers (20150922105210)
+  [1m[35m (103.3ms)[0m  ALTER TABLE `users` ADD `password_digest` varchar(255)
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES (?)  [["version", "20150922105210"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'ror'
+  AND fk.table_name = 'attendees'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `attendees`
+  [1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'ror'
+  AND fk.table_name = 'categories'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `categories`
+  [1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'ror'
+  AND fk.table_name = 'event_groupships'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `event_groupships`
+  [1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'ror'
+  AND fk.table_name = 'events'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `events`
+  [1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'ror'
+  AND fk.table_name = 'groups'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `groups`
+  [1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'ror'
+  AND fk.table_name = 'locations'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `locations`
+  [1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'ror'
+  AND fk.table_name = 'microposts'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `microposts`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'ror'
+  AND fk.table_name = 'people'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `people`
+  [1m[36m (0.1ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'ror'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+
+
+Started GET "/" for 192.168.80.1 at 2015-10-08 19:26:08 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_nav.html.erb (1.2ms)
+  Rendered static_pages/_footer.html.erb (0.7ms)
+  Rendered static_pages/home.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 266ms (Views: 251.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/home" for 192.168.80.1 at 2015-10-08 19:26:11 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_nav.html.erb (0.3ms)
+  Rendered static_pages/_footer.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.168.80.1 at 2015-10-08 19:26:12 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_nav.html.erb (0.2ms)
+  Rendered static_pages/_footer.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/help" for 192.168.80.1 at 2015-10-08 19:26:14 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/_nav.html.erb (0.3ms)
+  Rendered static_pages/_footer.html.erb (0.0ms)
+  Rendered static_pages/help.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/home" for 192.168.80.1 at 2015-10-08 19:26:16 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_nav.html.erb (0.3ms)
+  Rendered static_pages/_footer.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/help" for 192.168.80.1 at 2015-10-08 19:26:17 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/_nav.html.erb (0.4ms)
+  Rendered static_pages/_footer.html.erb (0.0ms)
+  Rendered static_pages/help.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/help" for 192.168.80.1 at 2015-10-08 19:26:29 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/_nav.html.erb (1.1ms)
+  Rendered static_pages/_footer.html.erb (0.1ms)
+  Rendered static_pages/help.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-08 19:26:29 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 192.168.80.1 at 2015-10-08 19:26:29 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-08 19:26:29 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-08 19:26:29 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-08 19:26:29 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.80.1 at 2015-10-08 19:26:29 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/static_pages/help" for 192.168.80.1 at 2015-10-08 19:26:49 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/_nav.html.erb (0.7ms)
+  Rendered static_pages/_footer.html.erb (0.1ms)
+  Rendered static_pages/help.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 59ms (Views: 57.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-08 19:26:49 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.80.1 at 2015-10-08 19:26:49 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 192.168.80.1 at 2015-10-08 19:26:49 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-08 19:26:49 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-08 19:26:49 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-08 19:26:49 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/static_pages/help?a=1" for 192.168.80.1 at 2015-10-08 19:26:53 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#help as HTML
+  Parameters: {"a"=>"1"}
+  Rendered static_pages/_nav.html.erb (1.8ms)
+  Rendered static_pages/_footer.html.erb (0.1ms)
+  Rendered static_pages/help.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 19:27:02 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/static_pages/help" for 192.168.80.1 at 2015-10-08 19:27:07 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/_nav.html.erb (0.5ms)
+  Rendered static_pages/_footer.html.erb (0.0ms)
+  Rendered static_pages/help.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/static_pages/help?a=1&d=2" for 192.168.80.1 at 2015-10-08 19:27:17 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#help as HTML
+  Parameters: {"a"=>"1", "d"=>"2"}
+  Rendered static_pages/_nav.html.erb (0.3ms)
+  Rendered static_pages/_footer.html.erb (0.0ms)
+  Rendered static_pages/help.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 19:43:48 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (13.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+
+Started GET "/static_pages/help?a=1&d=2" for 192.168.80.1 at 2015-10-08 19:46:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#help as HTML
+  Parameters: {"a"=>"1", "d"=>"2"}
+  Rendered static_pages/_nav.html.erb (1.0ms)
+  Rendered static_pages/_footer.html.erb (0.5ms)
+  Rendered static_pages/help.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 181ms (Views: 159.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-08 19:46:55 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.80.1 at 2015-10-08 19:46:55 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-08 19:46:55 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-08 19:46:55 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-08 19:46:55 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-08 19:46:55 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-08 19:46:55 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 19:46:55 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/static_pages/help" for 192.168.80.1 at 2015-10-08 19:47:50 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#help as HTML
+  Rendered static_pages/_nav.html.erb (0.5ms)
+  Rendered static_pages/_footer.html.erb (0.0ms)
+  Rendered static_pages/help.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 44ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 19:47:50 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/static_pages/home" for 192.168.80.1 at 2015-10-08 19:47:53 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_nav.html.erb (0.4ms)
+  Rendered static_pages/_footer.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 19:47:53 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 19:48:04 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 19:48:05 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/static_pages/help?a=1&d=2" for 192.168.80.1 at 2015-10-08 19:48:56 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#help as HTML
+  Parameters: {"a"=>"1", "d"=>"2"}
+  Rendered static_pages/_nav.html.erb (0.7ms)
+  Rendered static_pages/_footer.html.erb (0.7ms)
+  Rendered static_pages/help.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-08 19:48:56 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.80.1 at 2015-10-08 19:48:56 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-08 19:48:56 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-08 19:48:56 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-08 19:48:56 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-08 19:48:56 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-08 19:48:56 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 19:48:56 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  `users`.* FROM `users`  ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  ORDER BY `users`.`id` DESC LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'v@v.com' LIMIT 1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO `users` (`name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES (?, ?, ?, ?, ?)  [["name", "v"], ["email", "v@v.com"], ["password_digest", "123"], ["created_at", "2015-10-09 02:50:49"], ["updated_at", "2015-10-09 02:50:49"]]
+  [1m[36m (3.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users`  ORDER BY `users`.`id` DESC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users`  ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  ORDER BY `users`.`id` DESC LIMIT 1
+
+
+Started GET "/users/1" for 192.168.80.1 at 2015-10-08 19:54:41 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered users/show.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    4: <hr>
+    5: <p>
+    6:   <strong>Name:</strong>
+    7:   <%= @user.name %>
+    8: </p>
+    9: 
+   10: <p>
+  app/views/users/show.html.erb:7:in `_app_views_users_show_html_erb___1388572723383554230_70208622466420'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.5ms)
+
+
+Started GET "/users/980190963" for 192.168.80.1 at 2015-10-08 19:55:21 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    4: <hr>
+    5: <p>
+    6:   <strong>Name:</strong>
+    7:   <%= @user.name %>
+    8: </p>
+    9: 
+   10: <p>
+  app/views/users/show.html.erb:7:in `_app_views_users_show_html_erb___1388572723383554230_70208622466420'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.6ms)
+
+
+Started GET "/users" for 192.168.80.1 at 2015-10-08 19:55:53 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @users.each do |user| %>
+    16:       <tr>
+    17:         <td><%= user.name %></td>
+    18:         <td><%= user.email %></td>
+  app/views/users/index.html.erb:15:in `_app_views_users_index_html_erb___1762636808091313573_70208677478180'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.6ms)
+
+
+Started GET "/users/list" for 192.168.80.1 at 2015-10-08 19:55:58 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"list"}
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    4: <hr>
+    5: <p>
+    6:   <strong>Name:</strong>
+    7:   <%= @user.name %>
+    8: </p>
+    9: 
+   10: <p>
+  app/views/users/show.html.erb:7:in `_app_views_users_show_html_erb___1388572723383554230_70208622466420'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.1ms)
+
+
+Started GET "/users" for 192.168.80.1 at 2015-10-08 19:56:02 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @users.each do |user| %>
+    16:       <tr>
+    17:         <td><%= user.name %></td>
+    18:         <td><%= user.email %></td>
+  app/views/users/index.html.erb:15:in `_app_views_users_index_html_erb___1762636808091313573_70208677478180'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.5ms)
+
+
+Started GET "/users" for 192.168.80.1 at 2015-10-08 19:57:09 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    12:   </thead>
+    13: 
+    14:   <tbody>
+    15:     <% @users.each do |user| %>
+    16:       <tr>
+    17:         <td><%= user.name %></td>
+    18:         <td><%= user.email %></td>
+  app/views/users/index.html.erb:15:in `_app_views_users_index_html_erb___1762636808091313573_70208677478180'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.7ms)
+
+
+Started GET "/users/new" for 192.168.80.1 at 2015-10-08 20:05:51 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 20:05:52 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/980190963" for 192.168.80.1 at 2015-10-08 20:08:22 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1  [["id", 980190963]]
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 140ms (Views: 26.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 20:08:22 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/980190963" for 192.168.80.1 at 2015-10-08 20:08:41 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1[0m  [["id", 980190963]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.80.1 at 2015-10-08 20:08:41 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-08 20:08:41 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-08 20:08:41 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-08 20:08:41 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-08 20:08:41 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-08 20:08:41 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-08 20:08:41 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 20:08:41 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/9" for 192.168.80.1 at 2015-10-08 20:11:09 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1  [["id", 9]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=9):
+  app/controllers/users_controller.rb:5:in `show'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.8ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 20:11:51 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/980190963/edit" for 192.168.80.1 at 2015-10-08 20:11:52 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  Rendered users/_form.html.erb (2.3ms)
+  Rendered users/edit.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@user) do |f| %>
+    2:   <% if @user.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__771575032452193251_70208556620060'
+  app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb___920143117511277702_70208556543580'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.2ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 20:11:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/980190963/edit" for 192.168.80.1 at 2015-10-08 20:11:56 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"980190963"}
+  Rendered users/_form.html.erb (1.8ms)
+  Rendered users/edit.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@user) do |f| %>
+    2:   <% if @user.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__771575032452193251_70208556620060'
+  app/views/users/edit.html.erb:3:in `_app_views_users_edit_html_erb___920143117511277702_70208556543580'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.4ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 20:11:58 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/980190963" for 192.168.80.1 at 2015-10-08 20:12:38 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1[0m  [["id", 980190963]]
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 52ms (Views: 30.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-08 20:12:38 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-08 20:12:38 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.80.1 at 2015-10-08 20:12:38 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-08 20:12:38 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-08 20:12:38 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-08 20:12:38 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-08 20:12:38 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 20:12:38 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/980190963" for 192.168.80.1 at 2015-10-08 20:13:04 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1  [["id", 980190963]]
+  Rendered users/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 29952ms (Views: 372.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-08 20:13:34 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-08 20:13:34 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-08 20:13:34 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-08 20:13:34 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-08 20:13:34 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.80.1 at 2015-10-08 20:13:34 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-08 20:13:35 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 20:13:35 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/980190963" for 192.168.80.1 at 2015-10-08 20:13:46 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"980190963"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1[0m  [["id", 980190963]]
+  Rendered users/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 446ms (Views: 342.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.80.1 at 2015-10-08 20:13:48 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-08 20:13:48 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-08 20:13:48 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-08 20:13:48 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-08 20:13:48 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-08 20:13:48 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-08 20:13:48 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 20:13:48 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/singup" for 192.168.80.1 at 2015-10-08 20:32:22 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"singup"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 11ms (ActiveRecord: 0.8ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=singup):
+  app/controllers/users_controller.rb:5:in `show'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (161.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (41.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (229.6ms)
+
+
+Started GET "/singup" for 192.168.80.1 at 2015-10-08 20:32:30 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/singup"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (43.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (40.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (382.9ms)
+
+
+Started GET "/users/new" for 192.168.80.1 at 2015-10-08 20:32:42 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 222ms (Views: 218.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 20:32:43 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 192.168.80.1 at 2015-10-08 20:37:43 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (115.3ms)
+Completed 200 OK in 375ms (Views: 330.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-08 20:37:44 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-08 20:37:44 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-08 20:37:44 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.80.1 at 2015-10-08 20:37:44 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-08 20:37:44 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-08 20:37:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-08 20:37:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 20:37:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 192.168.80.1 at 2015-10-08 20:38:53 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 299ms (Views: 292.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-08 20:38:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-08 20:38:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-08 20:38:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.80.1 at 2015-10-08 20:38:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-08 20:38:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-08 20:38:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-08 20:38:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 20:38:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 192.168.80.1 at 2015-10-08 20:38:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 400ms (Views: 392.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-08 20:38:55 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-08 20:38:55 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-08 20:38:55 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.80.1 at 2015-10-08 20:38:55 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-08 20:38:55 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-08 20:38:55 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-08 20:38:55 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 20:38:55 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 192.168.80.1 at 2015-10-08 20:39:18 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 315ms (Views: 298.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-08 20:39:19 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.80.1 at 2015-10-08 20:39:19 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-08 20:39:19 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-08 20:39:19 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-08 20:39:19 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-08 20:39:19 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-08 20:39:19 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 20:39:19 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-08 20:39:34 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+AbstractController::ActionNotFound (The action 'create' could not be found for UsersController):
+  actionpack (4.2.3) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.8ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 20:39:38 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 192.168.80.1 at 2015-10-08 20:39:44 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 304ms (Views: 299.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.80.1 at 2015-10-08 20:39:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-08 20:39:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-08 20:39:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-08 20:39:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-08 20:39:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-08 20:39:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-08 20:39:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 20:39:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 192.168.80.1 at 2015-10-08 21:50:40 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (39.0ms)
+Completed 200 OK in 328ms (Views: 322.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-08 21:50:40 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-08 21:50:41 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-08 21:50:41 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-08 21:50:41 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-08 21:50:41 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.80.1 at 2015-10-08 21:50:41 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-08 21:50:41 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 21:50:41 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-08 21:50:42 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+AbstractController::ActionNotFound (The action 'create' could not be found for UsersController):
+  actionpack (4.2.3) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.9ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 21:50:44 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 192.168.80.1 at 2015-10-08 22:38:11 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 297ms (Views: 268.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-08 22:38:11 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.80.1 at 2015-10-08 22:38:11 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-08 22:38:11 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-08 22:38:11 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-08 22:38:11 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-08 22:38:11 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-08 22:38:11 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 22:38:11 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-08 22:38:56 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+AbstractController::ActionNotFound (The action 'create' could not be found for UsersController):
+  actionpack (4.2.3) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 22:39:48 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-08 22:39:52 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+AbstractController::ActionNotFound (The action 'create' could not be found for UsersController):
+  actionpack (4.2.3) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 22:39:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 192.168.80.1 at 2015-10-08 22:48:44 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-08 22:48:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-08 22:48:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-08 22:48:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-08 22:48:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-08 22:48:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.80.1 at 2015-10-08 22:48:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-08 22:48:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 192.168.80.1 at 2015-10-08 22:49:50 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-08 22:49:50 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.80.1 at 2015-10-08 22:49:50 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-08 22:49:50 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-08 22:49:50 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-08 22:49:51 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-08 22:49:51 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-08 22:49:51 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 22:49:51 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 192.168.80.1 at 2015-10-08 22:50:05 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 22:50:08 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-08 23:28:21 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yZOmOPzTyD9FQqweVVlvoBB1v/FRk0EdsJ7Rq3MyUR/c6BXJHIN2i0kaThCLLP6SnyG0bUNAzi2Ft6kDvPZsrg==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my accout"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template users/create, application/create with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/data/ruby/ror/app/views"
+  * "/usr/local/lib/ruby/gems/2.2.0/gems/kaminari-0.16.3/app/views"
+):
+  actionview (4.2.3) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.3) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/local/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (20.3ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 23:28:59 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 192.168.80.1 at 2015-10-08 23:29:00 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 40ms (Views: 27.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-08 23:29:00 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.80.1 at 2015-10-08 23:29:00 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-08 23:29:00 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-08 23:29:00 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-08 23:29:00 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-08 23:29:00 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-08 23:29:00 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 23:29:00 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-08 23:29:01 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jBGhlBvsKZ62Y/EiffdxlfGIyd0fsVA4K7EBZFn3yxmZahJl+7yXKro7EyyjguCnftzCQQ1i3wgemHnMljP2qA==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my accout"}
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Users#new</h1>
+    2: <div class="row">
+    3:   <div class="col-md-5 col-md-offset-3">
+    4:     <%= form_for(@user) do |f| %>
+    5:       <%= f.label :name %>
+    6:       <%= f.text_field :name %>
+    7: 
+  app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb__432623820691982050_70220770711200'
+  app/controllers/users_controller.rb:11:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.3ms)
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-08 23:29:28 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jBGhlBvsKZ62Y/EiffdxlfGIyd0fsVA4K7EBZFn3yxmZahJl+7yXKro7EyyjguCnftzCQQ1i3wgemHnMljP2qA==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my accout"}
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Users#new</h1>
+    2: <div class="row">
+    3:   <div class="col-md-5 col-md-offset-3">
+    4:     <%= form_for(@user) do |f| %>
+    5:       <%= f.label :name %>
+    6:       <%= f.text_field :name %>
+    7: 
+  app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb__432623820691982050_70220770711200'
+  app/controllers/users_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.9ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 23:29:30 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-08 23:29:31 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jBGhlBvsKZ62Y/EiffdxlfGIyd0fsVA4K7EBZFn3yxmZahJl+7yXKro7EyyjguCnftzCQQ1i3wgemHnMljP2qA==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my accout"}
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Users#new</h1>
+    2: <div class="row">
+    3:   <div class="col-md-5 col-md-offset-3">
+    4:     <%= form_for(@user) do |f| %>
+    5:       <%= f.label :name %>
+    6:       <%= f.text_field :name %>
+    7: 
+  app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb__432623820691982050_70220770711200'
+  app/controllers/users_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.6ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-08 23:32:05 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-08 23:32:17 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jBGhlBvsKZ62Y/EiffdxlfGIyd0fsVA4K7EBZFn3yxmZahJl+7yXKro7EyyjguCnftzCQQ1i3wgemHnMljP2qA==", "user"=>{"name"=>"123", "email"=>"dakgzhu@foxmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my accout"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.9ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/users_controller.rb:10:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.1ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-09 02:57:08 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-09 02:57:15 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jBGhlBvsKZ62Y/EiffdxlfGIyd0fsVA4K7EBZFn3yxmZahJl+7yXKro7EyyjguCnftzCQQ1i3wgemHnMljP2qA==", "user"=>{"name"=>"123", "email"=>"dakgzhu@foxmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my accout"}
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'dakgzhu@foxmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `users` (`name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES (?, ?, ?, ?, ?)  [["name", "123"], ["email", "dakgzhu@foxmail.com"], ["password_digest", "$2a$10$LMS95x0d3L5k4zgYexgCZuEZiUTY0rvjJrCXBnp5MaR/VBPUf0nRi"], ["created_at", "2015-10-09 09:57:15"], ["updated_at", "2015-10-09 09:57:15"]]
+  [1m[36m (10.8ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 14.0ms)
+
+ActionView::MissingTemplate (Missing template show/1 with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/data/ruby/ror/app/views"
+  * "/usr/local/lib/ruby/gems/2.2.0/gems/kaminari-0.16.3/app/views"
+):
+  app/controllers/users_controller.rb:12:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (20.3ms)
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-09 02:58:09 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jBGhlBvsKZ62Y/EiffdxlfGIyd0fsVA4K7EBZFn3yxmZahJl+7yXKro7EyyjguCnftzCQQ1i3wgemHnMljP2qA==", "user"=>{"name"=>"123", "email"=>"dakgzhu@foxmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my accout"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = 'dakgzhu@foxmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 119ms (Views: 39.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-09 02:58:09 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-09 02:58:09 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-3e01c462771eea9603bf542619835076f6a8855d0d64def16c423e0027281f6c.css?body=1" for 192.168.80.1 at 2015-10-09 02:58:09 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-09 02:58:09 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-09 02:58:09 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-09 02:58:09 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-09 02:58:09 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-09 02:58:09 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-09 02:58:27 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yvRkqqd9Jf+9Fd9TFRQoGnaIKWU3HGx4BbfWLlsFoDbfj9dbRy2bS7FNPV3LYbko+dwi+SXP40gwnq6GlMGdhw==", "user"=>{"name"=>"1234", "email"=>"dakgzhu@foxmail.c", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my accout"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = 'dakgzhu@foxmail.c' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `users` (`name`, `email`, `password_digest`, `created_at`, `updated_at`) VALUES (?, ?, ?, ?, ?)[0m  [["name", "1234"], ["email", "dakgzhu@foxmail.c"], ["password_digest", "$2a$10$6Rn/0fgfN1djbQi1aSo4ROijOibNFb7ENKd2s21ktxyFG4cCf8Hbu"], ["created_at", "2015-10-09 09:58:27"], ["updated_at", "2015-10-09 09:58:27"]]
+  [1m[35m (2.4ms)[0m  COMMIT
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 89ms (Views: 21.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-09 02:58:27 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.168.80.1 at 2015-10-09 02:59:08 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_nav.html.erb (1.0ms)
+  Rendered static_pages/_footer.html.erb (0.6ms)
+  Rendered static_pages/home.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-09 02:59:09 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.168.80.1 at 2015-10-09 03:19:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_nav.html.erb (0.4ms)
+  Rendered static_pages/_footer.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 72ms (Views: 71.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cover.self-b6f6c45e6b8ea272ec3f10872ce2562c61f04ff7c5b70b545f52f3ea546a016c.css?body=1" for 192.168.80.1 at 2015-10-09 03:19:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-09 03:19:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-09 03:19:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-09 03:19:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-09 03:19:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-09 03:19:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-09 03:19:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-09 03:19:45 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 192.168.80.1 at 2015-10-09 03:19:51 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 35ms (Views: 26.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-09 03:19:52 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 192.168.80.1 at 2015-10-09 03:20:14 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-09 03:20:14 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-09 03:20:14 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-09 03:20:14 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-09 03:20:14 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-09 03:20:14 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-09 03:20:14 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-aa67bf9798b0e002a541b522c8187449c424251aff7144aadd2fb223bd30e278.css?body=1" for 192.168.80.1 at 2015-10-09 03:20:14 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-09 03:20:14 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.168.80.1 at 2015-10-09 03:20:20 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_nav.html.erb (0.6ms)
+  Rendered static_pages/_footer.html.erb (0.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 32ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-09 03:20:20 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.168.80.1 at 2015-10-09 03:25:07 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_nav.html.erb (19.8ms)
+  Rendered static_pages/home.html.erb within layouts/application (20.3ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `users_new_path' for #<#<Class:0x007fbb19629c48>:0x007fbb08d38888>):
+     6:         <li class='<%= request.url.split("/")[-1] == "home" ? "active" : "" %>'><%= link_to "Home",static_pages_home_path %></li>
+     7:         <li class='<%= request.url.split("/")[-1] == "help" ? "active" : "" %>'><%= link_to "Help",static_pages_help_path %></li>
+     8:         <li class='<%= request.url.split("/")[-1] == "about" ? "active" : "" %>'><%= link_to "About",static_pages_about_path %></li>
+     9:         <li><%= link_to "sing up/login in",users_new_path %></li>
+    10:       </ul>
+    11:     </nav>
+    12:   </div>
+  app/views/static_pages/_nav.html.erb:9:in `_app_views_static_pages__nav_html_erb___1267872979938915957_70220641768360'
+  app/views/static_pages/home.html.erb:8:in `_app_views_static_pages_home_html_erb__3124806855209656610_70220776149160'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.5ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-09 03:26:43 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.168.80.1 at 2015-10-09 03:26:46 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_nav.html.erb (1.7ms)
+  Rendered static_pages/_footer.html.erb (0.5ms)
+  Rendered static_pages/home.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cover.self-aa67bf9798b0e002a541b522c8187449c424251aff7144aadd2fb223bd30e278.css?body=1" for 192.168.80.1 at 2015-10-09 03:26:47 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-09 03:26:47 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-09 03:26:47 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-09 03:26:47 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-09 03:26:47 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-09 03:26:47 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-09 03:26:47 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-09 03:26:47 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/users/new" for 192.168.80.1 at 2015-10-09 03:26:49 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-09 03:26:49 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-09 03:29:00 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pdQsnNkoPBLHifJ3qgcLA2JoBiLPWSq615C6btXcu32wr59tOXiCpsvREHl0cpox7TwNvt2KpYriucLGGhiGzA==", "user"=>{"name"=>"234", "email"=>"234", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my accout"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = '234' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 32ms (Views: 22.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-09 03:29:00 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-09 03:36:20 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pdQsnNkoPBLHifJ3qgcLA2JoBiLPWSq615C6btXcu32wr59tOXiCpsvREHl0cpox7TwNvt2KpYriucLGGhiGzA==", "user"=>{"name"=>"234", "email"=>"234", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my accout"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = '234' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (Missing partial shared/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/data/ruby/ror/app/views"
+  * "/usr/local/lib/ruby/gems/2.2.0/gems/kaminari-0.16.3/app/views"
+):
+    2: <div class="row">
+    3:   <div class="col-md-5 col-md-offset-3">
+    4:     <%= form_for(@user) do |f| %>
+    5:       <%= render 'shared/error_messages' %>
+    6: 
+    7:       <%= f.label :name %>
+    8:       <%= f.text_field :name,class: 'form-control' %>
+  app/views/users/new.html.erb:5:in `block in _app_views_users_new_html_erb__432623820691982050_70220774190600'
+  app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb__432623820691982050_70220774190600'
+  app/controllers/users_controller.rb:14:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.9ms)
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-09 03:36:32 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pdQsnNkoPBLHifJ3qgcLA2JoBiLPWSq615C6btXcu32wr59tOXiCpsvREHl0cpox7TwNvt2KpYriucLGGhiGzA==", "user"=>{"name"=>"234", "email"=>"234", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my accout"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = '234' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 37ms (Views: 32.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-09 03:36:32 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-09 03:36:32 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-aa67bf9798b0e002a541b522c8187449c424251aff7144aadd2fb223bd30e278.css?body=1" for 192.168.80.1 at 2015-10-09 03:36:32 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-09 03:36:32 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-09 03:36:32 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-09 03:36:32 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-09 03:36:32 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-09 03:36:32 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-09 03:38:46 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pdQsnNkoPBLHifJ3qgcLA2JoBiLPWSq615C6btXcu32wr59tOXiCpsvREHl0cpox7TwNvt2KpYriucLGGhiGzA==", "user"=>{"name"=>"234", "email"=>"234", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my accout"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = '234' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered shared/_error_messages.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 82ms (Views: 77.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/cover.self-9d4b4a78c96b1d11959a84c249241bb62df2abe61ae53b42dc2ed0536ba1c091.css?body=1" for 192.168.80.1 at 2015-10-09 03:38:46 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-09 03:38:46 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-832450984e4b0601b8ad8cf6e8f585a534610d6f1aedf17b255b9f9fe3ec5159.css?body=1" for 192.168.80.1 at 2015-10-09 03:38:46 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-09 03:38:46 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-09 03:38:46 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-09 03:38:46 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-09 03:38:46 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-09 03:38:46 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-09 03:38:51 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0USSqMfgTgbMtEvK4Rg/D+uilaKHe5Cxf8RcpCQ1WkPEPyFZJ7DwssDsqcQ/ba49ZPaePpWoH4FK7SQM6/Fn8g==", "user"=>{"name"=>"234", "email"=>"234", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my accout"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = '234' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered users/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 42ms (Views: 35.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-09 03:38:51 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.168.80.1 at 2015-10-09 03:39:00 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_nav.html.erb (1.7ms)
+  Rendered static_pages/_footer.html.erb (0.1ms)
+  Rendered static_pages/home.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-09 03:39:00 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/static_pages/home" for 192.168.80.1 at 2015-10-09 03:39:01 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_nav.html.erb (0.3ms)
+  Rendered static_pages/_footer.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 25ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-09 03:39:02 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255

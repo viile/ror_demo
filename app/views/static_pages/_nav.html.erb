@@ -6,6 +6,7 @@
         <li class='<%= request.url.split("/")[-1] == "home" ? "active" : "" %>'><%= link_to "Home",static_pages_home_path %></li>
         <li class='<%= request.url.split("/")[-1] == "help" ? "active" : "" %>'><%= link_to "Help",static_pages_help_path %></li>
         <li class='<%= request.url.split("/")[-1] == "about" ? "active" : "" %>'><%= link_to "About",static_pages_about_path %></li>
+        <li><%= link_to "sing up/login in","users/new" %></li>
       </ul>
     </nav>
   </div>
