@@ -17705,3 +17705,126 @@ Completed 200 OK in 25ms (Views: 25.1ms | ActiveRecord: 0.0ms)
 
 Started GET "/assets/jquery.min.map" for 192.168.80.1 at 2015-10-09 03:39:02 -0700
 Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.168.80.1 at 2015-10-10 00:36:13 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/_nav.html.erb (2.5ms)
+  Rendered static_pages/_footer.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 238ms (Views: 224.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 192.168.80.1 at 2015-10-10 00:40:10 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (2.0ms)
+  Rendered users/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 38ms (Views: 31.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-10 00:40:11 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AcPcHJWwTVuM7vTvoT+AnYWqonzCUDgzni8q32mkeR4rbKmYl0Oc77rAzO+fYzac1MD6lUwgfiR+KzeQuOMQKg==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my accout"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered shared/_error_messages.html.erb (1.7ms)
+  Rendered users/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 34ms (Views: 22.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-10 00:45:23 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AcPcHJWwTVuM7vTvoT+AnYWqonzCUDgzni8q32mkeR4rbKmYl0Oc77rAzO+fYzac1MD6lUwgfiR+KzeQuOMQKg==", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my accout"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered shared/_error_messages.html.erb (4.7ms)
+  Rendered users/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 62ms (Views: 57.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-10 00:45:23 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-9d4b4a78c96b1d11959a84c249241bb62df2abe61ae53b42dc2ed0536ba1c091.css?body=1" for 192.168.80.1 at 2015-10-10 00:45:23 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/debug.self-a1a849a5eca8fecec5bc77f259046857f1a8e5e867f1b83e821b441d7d337571.css?body=1" for 192.168.80.1 at 2015-10-10 00:45:23 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-10 00:45:23 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-10 00:45:23 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-10 00:45:23 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-10 00:45:23 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-10 00:45:31 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JYlhYlsPiqfYSNH1dHuOnyNe35Y0dpyht3PnanU/MlwPJhTmWfxbE+5m6fVKJziecjSHf7oG2rZXd/olpHhbaA==", "user"=>{"name"=>"adfad", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my accout"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered shared/_error_messages.html.erb (1.4ms)
+  Rendered users/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 54ms (Views: 45.7ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users`[0m
+
+
+Started POST "/users" for 192.168.80.1 at 2015-10-10 00:51:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JYlhYlsPiqfYSNH1dHuOnyNe35Y0dpyht3PnanU/MlwPJhTmWfxbE+5m6fVKJziecjSHf7oG2rZXd/olpHhbaA==", "user"=>{"name"=>"adfad", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my accout"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered shared/_error_messages.html.erb (1.5ms)
+  Rendered users/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 56ms (Views: 50.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/debug.self-a1a849a5eca8fecec5bc77f259046857f1a8e5e867f1b83e821b441d7d337571.css?body=1" for 192.168.80.1 at 2015-10-10 00:51:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 192.168.80.1 at 2015-10-10 00:51:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cover.self-9d4b4a78c96b1d11959a84c249241bb62df2abe61ae53b42dc2ed0536ba1c091.css?body=1" for 192.168.80.1 at 2015-10-10 00:51:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-6655d1384d1509415d234003e6f81cf5de3d688790aaadc1091aa5bb5795b1f1.css?body=1" for 192.168.80.1 at 2015-10-10 00:51:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.min.self-d62a9d41fef2c7d31d7005b6de57b0875ffa9be7ae812438d06d154dc4a197ff.js?body=1" for 192.168.80.1 at 2015-10-10 00:51:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap.min.self-075878ec6a19d24f3b46052eb9e0e5bb5c2a098ac50d05d8e3a21309d129273a.js?body=1" for 192.168.80.1 at 2015-10-10 00:51:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-38c418b472a898496bbf524ac84dbea80cc11ba99ddee0e19de469e5d335eb0c.js?body=1" for 192.168.80.1 at 2015-10-10 00:51:54 -0700
+Cannot render console from 192.168.80.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
